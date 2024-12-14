@@ -1,0 +1,462 @@
+body{
+    background-color: #030027;
+    color:#ffffff;
+}
+
+a:link, a:visited{
+    color:#ffffff;
+    text-decoration: none;
+}
+
+a:hover{
+    color:#1B9AAA;
+
+}
+
+#facebook:hover{
+    color: #0866ff;
+}
+
+#whatsapp:hover{
+    color:#25D366
+}
+.navbar-superior{
+    display: flex;
+    position:fixed;
+    justify-content: space-around;
+    flex-direction: row;
+    font-family: Poppins;
+    font-weight: 200;
+    font-size: 2.5vw;
+    width: 100%;
+    align-items: center;
+    background-color: #151E3F;
+    color: white;
+}
+
+.navbar-superior > h2:hover{
+    color:#1B9AAA;
+}
+
+.navbar-inferior {
+    display: flex;
+    justify-content: space-around;
+    flex-direction: row;
+    background-color: #151E3F;
+    font-family: Poppins;
+    font-size: 1.5vh;
+    font-weight: 300;
+    margin: 0; 
+    width: 100%;
+    color: white;
+    position: fixed; 
+    bottom: 0; 
+    left: 0; 
+    z-index: 1000; 
+}
+
+.hero{
+    width:100%;
+    height: 85vh;
+}
+
+.quienes-somos > p{
+    font-size: 5.4vh;
+    font-family: "Open Sans";
+    text-align: justify;
+}
+
+.quienes-somos{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height:85vh;
+    padding-left: 15%;
+    padding-right: 15%;
+}
+
+.servicios > p{
+    font-size: 7vh;
+    font-family: "Open Sans";
+}
+
+.servicios{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 75vh;
+}
+
+.servicios-grid{
+    display: flex;
+    flex-direction: row; 
+    justify-content: space-around;
+}
+
+.descripcion{
+    max-width: 50%;
+    text-align: justify;
+    font-size: 5vh;
+}
+
+.imagen{
+    max-width: 40vw;
+    max-height: 50vh;
+    min-width: 25vw;
+}
+
+.visitanos{
+    display: flex;
+    height: 75vh;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.nombre-ubicaciones{
+    display: flex;
+    align-items:center;
+    justify-content: space-around;
+    font-family: "Opens Sans";
+}
+
+.img-ubicaciones{
+    display: flex;
+    align-items:center;
+    justify-content: space-around;
+}
+
+.web-hidden{
+    display: none;
+}
+
+
+.contact-button{
+    position: fixed;
+    bottom: 13vh; 
+    right: 5vh; 
+    padding: 1.3rem;
+    font-family: "Hammersmith One";
+    font-size: 1.2rem;
+    background-color: #1B9AAA;
+    color: white; 
+    border: none; 
+    border-radius: 3rem;
+    cursor: pointer; 
+    height: 11.5vh;
+    width: 35vh;
+    transition: background-color 0.3s ease;
+}
+
+.contact-button:hover{
+    background-color:darkturquoise;
+}
+
+
+
+@media(max-width: 480px) {
+    /*MOVIL EN PORTRAIT (VERTICAL)*/
+    .contact-button{
+        position: fixed;
+        bottom: 6vh;
+        right: 3vh; 
+        padding: 1.3rem; 
+        font-size: 1.2rem;
+        background-color: #1B9AAA; 
+        color: white;
+        border: none;
+        border-radius: 3rem;
+        cursor: pointer; 
+        height: 11.5vh;
+        width: 30vw;
+        transition: background-color 0.3s ease;
+    }
+
+    .mobile-hidden{
+        display: none;
+    }
+
+    .navbar-superior{
+        display: flex;
+        position:fixed;
+        justify-content: space-around;
+        font-weight: 200;
+        flex-direction: row;
+        font-size: 3vh;
+        width: 100%;
+    
+        background-color: #151E3F;
+        color: white;
+    }
+    
+    .navbar-inferior{
+        display: none;
+    }
+    
+    .hero{
+        width:100%;
+        height: 50vh;
+    }
+    
+    .quienes-somos > p{
+        font-size: 4.5vw;
+    }
+
+    .quienes-somos{
+        display: block;
+        align-items: center;
+        align-content: space-evenly;
+        width: 100%;
+        height: fit-content;  
+
+        padding-top:5%;
+    }
+    
+    .servicios > p{
+        font-size: 9vw;
+    }
+
+    .servicios{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        height: fit-content;
+        margin-top: 0;
+    }
+    
+    .servicios-grid{
+        display: flex;
+        flex-direction: column; 
+        justify-content: center;
+        align-items: center;
+    }
+
+    .descripcion {
+        font-size: 5vw;
+    }
+    
+    .descripcion{
+        min-width: 80%;
+    }
+    
+    .imagen{
+        background-color: blue;
+        min-width: 80%;
+        min-height: 30%;
+        max-height: 20vh;
+        margin-top: 1vh;
+        margin-bottom: 1vh;
+    }
+    
+    .visitanos{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        padding-top:5%;
+        padding-bottom: 2%;
+        width: 100vw;
+        height: fit-content;
+    }
+    
+    .nombre-ubicaciones{
+        display: flex;
+        align-items:center;
+        justify-content: center;
+    }
+    
+    .img-ubicaciones > h4{
+        font-size: 5vw;
+    }
+
+    .img-ubicaciones > a {
+        display: flex;
+        width: 90%;
+        height: fit-content;
+        justify-content: center;
+    }        
+    
+
+    .img-ubicaciones{
+        display: flex;
+        flex-direction: column;
+        align-items:center;
+        justify-content: space-between;
+        width: 100%;
+    }
+
+    .web-hidden{
+        display: inline;
+    }
+
+}
+
+@media (min-width: 647px) and (max-width: 930px) and (orientation: landscape) {
+    /*MOVILES EN LANDSCAPE (HORIZONTAL)*/
+    .navbar-superior {
+        justify-content: space-around;
+        font-size: 3vw;
+        font-weight: 300;
+    }
+
+    .hero {
+        height: 80vh;
+    }
+
+    .quienes-somos > p {
+        font-size: 2.7vw;
+    }
+
+    .quienes-somos {
+        padding: 5% 10%;
+        height: fit-content;
+    }
+
+    .servicios{
+        display: flex;
+        flex-direction: column;
+        gap: 1%;
+        padding-bottom: 4%;
+        height: 90%;
+    }
+
+    .servicios > p {
+        font-size: 4.5vw;
+    }
+
+    .servicios-grid {
+        flex-direction: row;
+        align-items: center;
+        padding-bottom: 5%;
+    }
+
+    .descripcion {
+        font-size: 3vw;
+        text-align: center;
+    }
+
+    .visitanos{
+        display: flex;
+        flex-direction: column;
+        gap: 5%;
+        margin-bottom: 4%;
+    }
+
+    .imagen {
+        max-width: 40%;
+        height: 45vh;
+        margin: 2vh 0;
+    }
+
+    .img-ubicaciones{
+        display: inline-flex;
+        flex-direction: row;
+        justify-content: space-around;
+    }
+
+    .anchor-ubic{
+        display: flex;
+        justify-content: center;
+        height: fit-content;
+        width: fit-content;
+    }
+
+    .img-ubicaciones > a >img{
+        height: 100vh;
+        width: 100vh;
+    }
+
+    .contact-button {
+        bottom: 23vh;
+        right: 5vh;
+        width: fit-content;
+        height: fit-content;
+    }
+}
+
+@media (min-width: 760px) and (max-width: 1200px) and (orientation: portrait) {
+    /*TABLETS PORTRAIT (VERTICAL)*/
+    .navbar-superior {
+        justify-content: space-around;
+        font-size: 2vh;
+        font-weight: 300;
+    }
+
+    .hero {
+        height: 80vh;
+    }
+
+    .quienes-somos > p {
+        font-size: 3.5vw;
+    }
+
+    .quienes-somos {
+        padding: 5% 10%;
+        height: fit-content;
+    }
+
+    .servicios{
+        display: flex;
+        flex-direction: column;
+        padding-bottom: 1%;
+        height: 90%;
+    }
+
+    .servicios > p {
+        font-size: 5.5vw;
+    }
+
+    .servicios-grid {
+        flex-direction: row;
+        align-items: center;
+        padding-bottom: 5%;
+    }
+
+    .descripcion {
+        font-size: 2.8vh;
+        text-align: center;
+        font-weight: 200;
+    }
+
+    .visitanos{
+        display: flex;
+        flex-direction: column;
+        gap: 5%;
+        margin-bottom: 4%;
+        height: fit-content;
+    }
+
+    .imagen {
+        max-width: 40%;
+        height: 45vh;
+        margin: 2vh 0;
+    }
+
+    .img-ubicaciones{
+        display: inline-flex;
+        flex-direction: row;
+        justify-content: space-around;
+    }
+
+    .anchor-ubic{
+        display: flex;
+        height: fit-content;
+        width: fit-content;
+        justify-content: center;
+    }
+
+    .img-ubicaciones > a >img{
+        height: 30vh;
+        width: 60vw;
+    }
+
+    .contact-button {
+        bottom: 13vh;
+        right: 4.6vh;
+        width: fit-content;
+        height: fit-content;
+        font-size: 3.7vw;
+    }
+}
