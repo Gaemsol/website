@@ -1,1 +1,347 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Lora', serif;
+}
+
+body {
+  background-color: rgb(13, 27, 42);
+  overflow-x: hidden;
+}
+
+/* ---- NAV FIJO TRANSLÚCIDO ---- */
+nav {
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background: rgba(13, 27, 42, 0.7); /* translúcido */
+  text-align: center;
+  z-index: 10;
+  padding: 15px 0;
+  backdrop-filter: blur(6px); /* difumina lo que hay detrás */
+}
+
+nav a {
+  font-family: 'Cinzel', serif;
+  font-weight: 500;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: #ffffff;
+  margin: 0 15px;
+  font-size: 20px;
+  letter-spacing: 1px;
+  position: relative;
+  transition: color 0.3s ease;
+}
+
+nav a:hover {
+  color: #5493ce;
+}
+
+/* ---- EFECTO SUBRAYADO ---- */
+nav a:before {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  background: #5493ce;
+  bottom: -4px;
+  left: 0;
+  opacity: 0;
+  transform: scaleX(0);
+  transition: opacity 0.3s, transform 0.3s;
+}
+
+nav a:hover:before {
+  opacity: 1;
+  transform: scaleX(1);
+}
+
+/* ---- CONTENIDO ---- */
+.centered-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-color: rgb(13, 27, 42);
+}
+
+.image-box {
+  position: relative;
+  width: 700px;
+  max-width: 95vw;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 0 25px #000000aa;
+}
+
+.image-box img {
+  width: 100%;
+  display: block;
+}
+
+.text-box {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: rgba(136, 134, 134, 0.9);
+  padding: 25px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px #000;
+  width: 85%;
+  max-width: 600px;
+  text-align: center;
+  z-index: 2;
+}
+
+.text-box p {
+  color: rgba(0, 0, 0, 0.9);
+  font-family: 'Merriweather', serif;
+  font-size: 16px;
+  line-height: 1.6;
+}
+
+/* ---- RESPONSIVE ---- */
+@media (max-width: 768px) {
+  nav {
+    padding: 10px 0;
+  }
+
+  nav a {
+    font-size: 14px;
+    margin: 0 8px;
+  }
+
+  .text-box {
+    width: 90%;
+    padding: 18px;
+  }
+
+  .text-box p {
+    font-size: 14px;
+  }
+}
+/* ====== SECCIÓN ASESORÍA ====== */
+.asesoria-section {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 40px;
+  padding: 80px 10%;
+  background-color: rgb(13, 27, 42);
+ 
+}
+
+.asesoria-img img {
+  width: 300px;        /* 🔹 controla tamaño */
+  height: auto;
+  border-radius: 12px;
+  object-fit: cover;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
+}
+
+.asesoria-texto {
+  max-width: 500px;
+  color: #ffffffab;
+  font-family: 'Georgia', serif;
+}
+
+.asesoria-texto h2 {
+  font-size: 28px;
+  margin-bottom: 15px;
+  color: #ffffffab;
+}
+
+.asesoria-texto p {
+  font-size: 16px;
+  line-height: 1.6;
+  text-align: justify;
+}
+
+/* 🔹 Vista móvil */
+@media (max-width: 768px) {
+  .asesoria-section {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .asesoria-img img {
+    width: 70%;
+  }
+}
+
+/* ====== SECCIÓN CONTABILIDAD GENERAL ====== */
+.contabilidad-section {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 40px;
+  padding: 80px 10%;
+  background-color: rgb(13, 27, 42);
+ 
+}
+
+.contabilidad-img img {
+  width: auto;        /* 🔹 controla tamaño */
+  height: 250px;
+  border-radius: 30px;
+  object-fit: cover;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
+}
+
+.contabilidad-texto {
+  max-width: 500px;
+  color: #ffffffab;
+  font-family: 'Georgia', serif;
+}
+
+.contabilidad-texto h2 {
+  font-size: 28px;
+  margin-bottom: 15px;
+  color: #ffffffab;
+}
+
+.contabilidad-texto p {
+  font-size: 16px;
+  line-height: 1.6;
+  text-align: justify;
+}
+.contabilidad-section {
+  flex-direction: row-reverse;
+}
+/* 🔹 Vista móvil */
+@media (max-width: 768px) {
+  .contabilidad-section {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .contabilidad-img img {
+    width: 70%;
+  }
+}
+/* SECTION AUDITORIA */
+.auditoria-section {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 40px;
+  padding: 80px 10%;
+  background-color: rgb(13, 27, 42);
+ 
+}
+
+.auditoria-img img {
+  width: 300px;        /* 🔹 controla tamaño */
+  height: auto;
+  border-radius: 12px;
+  object-fit: cover;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
+}
+
+.auditoria-texto {
+  max-width: 500px;
+  color: #ffffffab;
+  font-family: 'Georgia', serif;
+}
+
+.auditoria-texto h2 {
+  font-size: 28px;
+  margin-bottom: 15px;
+  color: #ffffffab;
+}
+
+.auditoria-texto p {
+  font-size: 16px;
+  line-height: 1.6;
+  text-align: justify;
+}
+
+/* 🔹 Vista móvil */
+@media (max-width: 768px) {
+  .auditoria-section {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .auditoria-img img {
+    width: 70%;
+  }
+}
+/* ====== SECCIÓN CONTABILIDAD GENERAL ====== */
+.leyes-section {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 40px;
+  padding: 80px 10%;
+  background-color: rgb(13, 27, 42);
+ 
+}
+
+.leyes-img img {
+  width: auto;        /* 🔹 controla tamaño */
+  height: 250px;
+  border-radius: 30px;
+  object-fit: cover;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
+}
+
+.leyes-texto {
+  max-width: 500px;
+  color: #ffffffab;
+  font-family: 'Georgia', serif;
+}
+
+.leyes-texto h2 {
+  font-size: 28px;
+  margin-bottom: 15px;
+  color: #ffffffab;
+}
+
+.leyes-texto p {
+  font-size: 16px;
+  line-height: 1.6;
+  text-align: justify;
+}
+.leyes-section {
+  flex-direction: row-reverse;
+}
+/* 🔹 Vista móvil */
+@media (max-width: 768px) {
+  .leyes-section {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .leyes-img img {
+    width: 70%;
+  }
+}
+/* mapa */
+.map-section {
+  padding: 60px 10%;
+  background-color: rgb(13, 27, 42);
+  text-align: center;
+}
+
+.map-section h2 {
+  font-size: 28px;
+  margin-bottom: 10px;
+  color: #ffffffab;
+}
+
+.map-section p {
+  font-size: 16px;
+  margin-bottom: 20px;
+  color: #ffffffab;
+}
+
+.map-container iframe {
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
+}
 
