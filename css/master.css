@@ -10,8 +10,10 @@ body {
   overflow-x: hidden;
 }
 
-/* ---- NAV FIJO TRANSLÚCIDO ---- */
 nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
   width: 100%;
   position: fixed;
   top: 0;
@@ -19,12 +21,37 @@ nav {
   background: rgba(13, 27, 42, 0.7); /* translúcido */
   text-align: center;
   z-index: 10;
-  padding: 15px 0;
+  padding: 18px 40px;
   backdrop-filter: blur(6px); /* difumina lo que hay detrás */
+}
+nav .logo{
+  font-family: 'Cinzel', serif;
+  font-weight: 700;
+  font-size: 28px;
+  letter-spacing: 2px;
+  color: #ffffff; /* ajustar según fondo */
+  text-decoration: none;
+}
+nav .nav-links a{
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 500;
+  color: #dfe7ef;
+  margin-left: 18px;
+  text-decoration: none;
+  transition: color .18s ease, transform .12s ease;
+}
+
+nav .nav-links a:hover{
+  color: #ffffff;
+  transform: translateY(-2px);
+}
+/* Ajustes responsive */
+@media (max-width: 720px){
+  nav{ flex-direction: column; gap: 10px; }
+  nav .nav-links{ display: flex; flex-wrap: wrap; justify-content: center; }
 }
 
 nav a {
-  font-family: 'Cinzel', serif;
   font-weight: 500;
   text-transform: uppercase;
   text-decoration: none;
